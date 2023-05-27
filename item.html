@@ -1,1 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杉林小舖</title>
+
+    <link rel="shortcut icon" href="../web/images/shanlin_shop_logo_icon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
 <!-- 商品詳情頁面 -->
+<body>
+    <!-- 頁首-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="../web/images/shanlin_shop_logo_icon.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- 導覽列 -->
+                        <!--<li class="nav-item">-->
+                            <!-- 按鈕1 (active 表正在作用)-->
+                            <!--<a class="nav-link active" aria-current="page" href="./index.html">首頁</a>-->
+                        <!--</li>-->
+                        <li class="nav-item">
+                            <!-- 按鈕2 查訂單-->
+                            <a class="nav-link" href="#"><img src="./images/order_paper_icon.svg" alt="查訂單"></a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- 按鈕3 登入-->
+                            <a class="nav-link" href="#popup1"><img src="./images/login_logo_icon.svg" alt="會員登入"></a>
+                            <div id="popup1" class="overlay">
+                                <div class="popup">
+                                    <a class="close" href="#">&times;</a>
+                                    <div class="content">
+                                        <div class="box_login">
+                                            <p1>綁定社群帳號，快速登入</p1>
+                                            <a class="button_login" href="">
+                                                <img src="./images/line_logo_icon.png" alt="line icon">
+                                            </a>
+                                            <a class="button_login" href="">
+                                                <img src="./images/facebook_logo_icon.png" alt="fb icon">
+                                            </a>
+                                            <div class="alert">
+                                                <p>請您在使用本網站前，確認您已審閱並同意本隱私權政策所列舉之全部條款。若您有任何不同意之處，則請勿使用本網站之服務。本隱私權政策僅適用於本網站對您個人資料的蒐集、處理和應用。<br>
+                                                    此外也會保留您在上網瀏覽或查詢時，伺服器自行產生的相關記錄，包括IP位址、Cookie紀錄、使用時間、使用的瀏覽器、瀏覽及點選資料紀錄等。<br>
+                                                    本網站蒐集得來的個人資料，都用於以下用途：對諮詢、商談、修改、補充的對應、確認及記錄；寄送與商品、服務、活動等訊息相關的宣傳品及電子郵件；
+                                                    商品配送；以及商品開發及其他服務的改善。本公司之員工，僅於其為您提供產品或服務之需求範圍內，對於您的個人資料得為有限之接觸。<br>
+                                                    本公司之員工，僅於其為您提供產品或服務之需求範圍內，對於您的個人資料得為有限之接觸。<br>
+                                                    當蒐集個人資料之目的消失或期限屆滿時，您可要求刪除、停止處理或利用個人資料，為了保護您的帳戶及個人資料的安全，
+                                                    請您不要任意將個人帳號、密碼提供予第三人獲允許第三人以您的個人資料申請帳號、密碼，否則相關責任由您自行承擔。<br>
+                                                    本公司僅與提供下列服務的公司分享個人資料，
+                                                    諸如：資料處理、完成客戶訂單、產品運送、管理及提升客戶資料、提供客戶服務、評估你對我們產品與服務的興趣、進行客戶研究或滿意度調查，該公司有義務保護你的資料，其可能位於品牌營運的任何地方。<br>
+                                                    若您對本隱私權保護政策有任何問題，請直接與本公司聯繫。<br>
+                                                    您在本網站所進行的所有線上訂購、交易或行為，以及本約定條款及相關網頁上之約定，都以中華民國法令為準據法。
+                                                    因本契約發生訴訟時，雙方同意以台灣台北地方法院為第一審管轄法院。契約條款如有疑議時，應為有利消費者之解釋。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <!-- 按鈕4 搜尋-->
+                            <a class="nav-link" href="#popup2"><img src="./images/search_icon.svg" alt="搜尋"></a>
+                            <div id="popup2" class="overlay">
+                                <div class="popup">
+                                    <h2>搜尋</h2>
+                                    <a class="close" href="#">&times;</a>
+                                    <div class="content">
+                                        <form class="d-flex mt-3" role="search">
+                                            <input class="form-control me-2" type="search" placeholder="商品搜尋"
+                                                aria-label="Search">
+                                            <button class="btn btn-outline-success" type="submit">搜尋</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <!-- 按鈕5 購物車-->
+                            <a class="nav-link" href="#"><img src="./images/shopping_cart_icon.svg" alt="購物車"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 頁面內容-->
+    <main>
+        <section>
+            <!-- div.layout_cell.flex_1>div.layout_inner>div#product_popular.product_inner>(div.product_title>div.product_title_container>h2)+ul.product_list>li.product$*3>a.product_item>figure>(div.product_img>img+button.addToCart[type=button])+figcaption.product_info>h3.product_item_title+div.product_forSale>h5.product_price+h4.product_discount -->
+    <!-- 熱門商品 -->
+    <div class="layout_cell flex_1">
+        <div class="layout_inner">
+            <div id="product_popular" class="product_inner">
+                <div class="product_title">
+                    <div class="product_title_container">
+                        <h2>產品項目</h2>
+                    </div>
+                </div>
+                <ul class="product_list">
+                    <li class="product">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="../web/images/dessert01-1.jpeg" alt="">   <!-- 商品圖片 -->
+                                    <button class="addToCart" type="button"> <!-- 加入購物車 -->
+                                        加入購物車
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">芒果</h3> <!-- 商品名稱 -->
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">100</h5> <!-- 商品價格 -->
+                                        <h4 class="product_discount">80</h4> <!-- 優惠價格 -->
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="../web/images/dessert02-1.jpeg" alt="">
+                                    <button class="addToCart" type="button">
+                                        加入購物車
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">木瓜</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">120</h5>
+                                        <h4 class="product_discount">99</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="../web/images/dessert03-1.jpeg" alt="">
+                                    <button class="addToCart" type="button">
+                                        加入購物車
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">芭樂</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">85</h5>
+                                        <h4 class="product_discount">60</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="../web/images/dessert03-1.jpeg" alt="">
+                                    <button class="addToCart" type="button">
+                                        加入購物車
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">芭樂</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">85</h5>
+                                        <h4 class="product_discount">60</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 最新上架 -->
+    <div class="layout_cell flex_1">
+        <div class="layout_inner">
+            <div id="product_new" class="product_inner">
+                <div class="product_title">
+                    <div class="product_title_container">
+                        <h2>最新上架</h2>
+                    </div>
+                </div>
+                <ul class="product_list">
+                    <li class="product1">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="" alt="">
+                                    <button class="addToCart" type="button">
+
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">木瓜果醬</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">150</h5>
+                                        <h4 class="product_discount">140</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="product2">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="" alt="">
+                                    <button class="addToCart" type="button">
+
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">蔓越莓果醬</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">150</h5>
+                                        <h4 class="product_discount">140</h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="product3">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="" alt="">
+                                    <button class="addToCart" type="button">
+
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">藍莓果醬</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">150</h5>
+                                        <h4 class="product_discount"></h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 生鮮現貨 -->
+    <div class="layout_cell flex_1">
+        <div class="layout_inner">
+            <div id="product_fresh" class="product_inner">
+                <div class="product_title">
+                    <div class="product_title_container">
+                        <h2>生鮮現貨</h2>
+                    </div>
+                </div>
+                <ul class="product_list">
+                    <li class="product">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="" alt="">
+                                    <button class="addToCart" type="button">
+
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">月餅</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">650</h5>
+                                        <h4 class="product_discount"></h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="" alt="">
+                                    <button class="addToCart" type="button">
+
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">蔥油餅</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">200</h5>
+                                        <h4 class="product_discount"></h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="product">
+                        <a href="" class="product_item">
+                            <figure>
+                                <div class="product_img">
+                                    <img src="" alt="">
+                                    <button class="addToCart" type="button">
+
+                                    </button>
+                                </div>
+                                <figcaption class="product_info">
+                                    <h3 class="product_item_title">芋頭糕</h3>
+                                    <div class="product_forSale">
+                                        <h5 class="product_price">199</h5>
+                                        <h4 class="product_discount"></h4>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="bottom">
+            copyright @ 2023 杉林小舖
+        </div>
+        <div id="gotop">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </footer>
+    <!-- jQuery 3.x -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- my script -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
