@@ -20,24 +20,27 @@
             <div class="data_inner">
                 <div class="data_search">
                     <!--  訂單頁面頂部前半 -->
-                    <label class="search_title">搜尋訂單</label>
-                    <select name="search_type" id="search_type">
-                        <!-- 搜尋分類 -->
-                        <option value="">請選擇</option>
-                        <option value="o_orderNomber">訂單號</option>
-                        <option value="o_itemName">商品名稱</option>
-                        <option value="o_account">帳號</option>
-                        <option value="o_name">姓名</option>
-                        <option value="o_phone">手機號</option>
-                        <option value="o_place">地址</option>
-                    </select>
-                    <input type="search" class="order_search_input" id="search_order" name="search_order">
-                    <input type="date" id="order_date_start" name="order_date_start" min="2023-01-01" max="3000-12-31">
-                    <input type="date" id="order_date_end" name="order_date_end" min="2023-01-01" max="3000-12-31">
-                    <button class="order_search_button" type="button" value="search_button"
-                        id="search_button">搜尋</button>
-                    <button class="order_export_button" type="button" value="export_button"
-                        id="export_button">導出</button>
+                    <form action="">
+                        <label class="search_title">搜尋訂單</label>
+                        <select name="search_type" id="search_type">
+                            <!-- 搜尋分類 -->
+                            <option value="">請選擇</option>
+                            <option value="o_orderNomber">訂單號</option>
+                            <option value="o_itemName">商品名稱</option>
+                            <option value="o_account">帳號</option>
+                            <option value="o_name">姓名</option>
+                            <option value="o_phone">手機號</option>
+                            <option value="o_place">地址</option>
+                        </select>
+                        <input type="search" class="order_search_input" id="search_order" name="search_order">
+                        <input type="date" id="order_date_start" name="order_date_start" min="2023-01-01"
+                            max="3000-12-31">
+                        <input type="date" id="order_date_end" name="order_date_end" min="2023-01-01" max="3000-12-31">
+                        <button class="order_search_button" type="button" value="search_button"
+                            id="search_button">搜尋</button>
+                        <button class="order_export_button" type="button" value="export_button"
+                            id="export_button">導出</button>
+                    </form>
                 </div>
                 <div class="list_date">
                     <!-- 訂單頁面頂部後半 -->
