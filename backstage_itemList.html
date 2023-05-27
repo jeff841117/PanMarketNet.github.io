@@ -26,7 +26,7 @@
                     <div id="popup3" class="overlay">
                         <div class="popup">
                             <div class="content">
-                                <form class="item_form" id="item_form" name="item_form">
+                                <form class="item_form" id="item_form" name="item_form" action="" method="post">
                                     <div class="">
                                         <label for="item_picture">商品圖片:</label>
                                         <input type="file" id="item_picture" name="item_picture"
@@ -60,7 +60,8 @@
                                         <li class="item_list5">
                                             <label for="item_priceReduction">優惠價格</label>
                                             <input type="number" id="item_priceReduction" name="item_priceReduction"
-                                                min="1" max="99999" readonly>
+                                                min="1" max="99999" >
+                                                <!-- readonly -->
                                         </li>
                                         <li class="item_list6">
                                             <label for="item_price">商品價格</label>
@@ -95,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-                    <form action="" method="post">
+                    <form action="" method="post" name="search_item">
                         <img src="" alt="">
                         <label class="search_title">搜尋商品</label>
                         <!-- <select name="search_type" id="search_type">
