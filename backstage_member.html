@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-hant-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杉林小舖</title>
+
+    <link rel="shortcut icon" href="../web/images/shanlin_shop_logo_icon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="layout_datatable">
+            <!-- 會員頁面 -->
+            <div class="data_inner">
+                <div class="data_search">
+                    <!--  會員頁面頂部前半 -->
+                    <form action="search_member_form" method="post">
+                        <label class="search_title">會員搜尋</label>
+                        <select name="search_type" id="search_type">
+                            <!-- 搜尋分類 -->
+                            <option value="">請選擇</option>
+                            <option value="m_account">帳號</option>
+                            <option value="m_name">姓名</option>
+                            <option value="m_phone">手機號</option>
+                            <option value="m_mail">電子郵件</option>
+                            <option value="m_place">地址</option>
+                        </select>
+                        <input type="search" class="member_search_input" id="search_member" name="search_member">
+                        <input type="date" id="member_dateStart" name="member_dateStart" min="2023-01-01"
+                            max="3000-12-31">
+                        <input type="date" id="member_dateEnd" name="member_dateEnd" min="2023-01-01" max="3000-12-31">
+                        <button class="member_search_button" type="button" name="search_button" value="search_button"
+                            id="search_button">搜尋</button>
+                        <button class="member_export_button" type="button" name="export_button" value="export_button"
+                            id="export_button">導出</button>
+                    </form>
+                </div>
+                <div class="list_date">
+                    <!-- 會員頁面頂部後半 -->
+                    <div class="list_info">
+                        <!-- 會員統計 -->
+                        <span class="list_info_num">每頁10筆</span>
+                        <span class="list_info_listNum">1/3</span>
+                        <span class="list_info_total">共3項商品</span>
+                    </div>
+                    <ul class="page_link">
+                        <!-- 會員頁切換 -->
+                        <li class="prev"><a href="">上一頁</a></li>
+                        <li class="prev_10"><a href="">上10頁</a></li>
+                        <li class="page_to"><a href="">1</a></li>
+                        <li class="page_to"><a href="">2</a></li>
+                        <li class="next_10"><a href="">下10頁</a></li>
+                        <li class="next"><a href="">下一頁</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <table>
+                    <!-- 表格標示 -->
+                    <thead>
+                        <tr>
+                            <th scope="col"><input type="checkbox" id="" name=""></th>
+                            <th scope="col">姓名</th>
+                            <th scope="col">手機號</th>
+                            <th scope="col">電子郵件</th>
+                            <th scope="col">會員帳號</th>
+                            <th scope="col">地址</th>
+                            <th scope="col">備註</th>
+                            <th scope="col">操作</th>
+                        </tr>
+                    </thead>
+                    <!-- 表格內容 -->
+                    <tbody>
+                        <tr>
+                            <form action="member_form" method="post">
+                                <th scope="row"><input type="checkbox" id="" name=""></th>
+                                <td>測試人</td>
+                                <td>0900112233</td>
+                                <td>qazqazqazqazqaz@gmail.com</td>
+                                <td>qazqazqazqazqaz</td>
+                                <td>台北市內湖區金龍路219號7樓</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam harum
+                                    distinctio
+                                    velit consequatur expedita labore, ipsum qui ipsa sunt. Eveniet tempore similique
+                                    sed
+                                    corrupti earum amet officiis iusto hic excepturi necessitatibus reiciendis
+                                    consectetur
+                                    consequuntur, deleniti iure minus qui perspiciatis deserunt fugit accusantium
+                                    cumque?
+                                    Soluta veniam minus, possimus perferendis sunt assumenda. Ipsa consectetur delectus
+                                    id
+                                    iste tempora aliquam dolores quibusdam vel quae, harum error unde. In provident sit
+                                    eum
+                                    optio repellendus repudiandae cum vero corporis? Odio debitis quo sed eos ad non
+                                    ratione, sint in nesciunt quidem commodi distinctio, iste labore maiores cupiditate,
+                                    enim necessitatibus architecto eligendi facilis eum. Illum.</td>
+                                <td>
+                                    <button class="member_operate_button" type="button" name="operate_button"
+                                        value="operate_button" id="export_button">導出</button>
+                                    <!-- <a class="button_operate" href="#">編輯</a> -->
+                                </td>
+                            </form>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- jQuery 3.x -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- my script -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
