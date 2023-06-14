@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>杉林小舖</title>
 
-    <link rel="shortcut icon" href="../web/images/shanlin_shop_logo_icon.png" />
+    <link rel="shortcut icon" href="./images/shanlin_shop_logo_icon.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -45,12 +45,12 @@
                             <div class="popup">
                                 <a class="close" href="#">&times;</a>
                                 <div class="content">
-                                    <div class="box_login">
+                                    <div class="box-login">
                                         <p1>綁定社群帳號，快速登入</p1>
-                                        <a class="button_login" href="">
+                                        <a class="button-login" href="">
                                             <img src="./images/line_logo_icon.png" alt="line icon">
                                         </a>
-                                        <a class="button_login" href="">
+                                        <a class="button-login" href="">
                                             <img src="./images/facebook_logo_icon.png" alt="fb icon">
                                         </a>
                                         <div class="alert">
@@ -73,8 +73,8 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <form name="search-form" id="search-form" class="d-flex" role="search" action="" name="">
-                            <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="輸入關鍵字" aria-label="Search">
+                        <form name="search-form" id="search-form" class="d-flex" role="search" action="" >
+                            <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="商品搜尋" aria-label="Search">
                             <input type="button" name="submit-btn" id="submit-btn">
                             <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
                         </form>
@@ -107,12 +107,12 @@
                             <div class="popup">
                                 <a class="close" href="#">&times;</a>
                                 <div class="content">
-                                    <div class="box_login">
+                                    <div class="box-login">
                                         <p1>綁定社群帳號，快速登入</p1>
-                                        <a class="button_login" href="">
+                                        <a class="button-login" href="">
                                             <img src="./images/line_logo_icon.png" alt="line icon">
                                         </a>
-                                        <a class="button_login" href="">
+                                        <a class="button-login" href="">
                                             <img src="./images/facebook_logo_icon.png" alt="fb icon">
                                         </a>
                                         <div class="alert">
@@ -142,10 +142,11 @@
                                 <h2>搜尋</h2>
                                 <a class="close" href="#">&times;</a>
                                 <div class="content">
-                                    <form class="d-flex mt-3" role="search" action="" name="">
-                                        <input class="form-control me-2" type="search" placeholder="商品搜尋"
+                                    <form name="search-form" id="search-form" class="d-flex mt-3" role="search" action="" >
+                                        <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="商品搜尋"
                                             aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit">搜尋</button>
+                                            <input type="button" name="submit-btn" id="submit-btn">
+                                            <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
                                     </form>
                                 </div>
                             </div>
@@ -166,70 +167,70 @@
     </header>
     <main>
         <section>
-            <!-- div.layout_cell.flex_1>div.layout_inner>div#product_popular.product_inner>(div.product_title>div.product_title_container>h2)+ul.product_list>li.product$*3>a.product_item>figure>(div.product_img>img+button.addToCart[type=button])+figcaption.product_info>h3.product_item_title+div.product_forSale>h5.product_price+h4.product_discount -->
+            <!-- div.layout-cell.flex-1>div.layout-inner>div#product-popular.product-inner>(div.product-title>div.product-title-container>h2)+ul.product-list>li.product$*3>a.product-item>figure>(div.product-img>img+button.addToCart[type=button])+figcaption.product-info>h3.product-item-title+div.product-forSale>h5.product-price+h4.product-discount -->
             <!-- 熱門商品 -->
-            <div class="layout_cell flex_1">
-                <div class="layout_inner">
-                    <div id="product_popular" class="product_inner">
-                        <div class="product_title">
-                            <div class="product_title_container">
+            <div class="layout-cell flex-1">
+                <div class="layout-inner">
+                    <div id="product-popular" class="product-inner">
+                        <div class="product-title">
+                            <div class="product-title-container">
                                 <h2>熱門商品</h2>
                             </div>
                         </div>
-                        <ul class="product_list">
+                        <ul class="product-list">
                             <li class="product1">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt=""> <!-- 商品圖片 -->
                                             <button class="addToCart" type="button">
                                                 <!-- 加入購物車 -->
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">芒果</h3> <!-- 商品名稱 -->
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">100</h5> <!-- 商品價格 -->
-                                                <h4 class="product_discount">80</h4> <!-- 優惠價格 -->
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芒果</h3> <!-- 商品名稱 -->
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">100</h5> <!-- 商品價格 -->
+                                                <h4 class="product-discount">80</h4> <!-- 優惠價格 -->
                                             </div>
                                         </figcaption>
                                     </figure>
                                 </a>
                             </li>
                             <li class="product2">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt="">
                                             <button class="addToCart" type="button">
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">木瓜</h3>
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">120</h5>
-                                                <h4 class="product_discount">99</h4>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">木瓜</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">120</h5>
+                                                <h4 class="product-discount">99</h4>
                                             </div>
                                         </figcaption>
                                     </figure>
                                 </a>
                             </li>
                             <li class="product3">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt="">
                                             <button class="addToCart" type="button">
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">芭樂</h3>
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">85</h5>
-                                                <h4 class="product_discount">60</h4>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芭樂</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">85</h5>
+                                                <h4 class="product-discount">60</h4>
                                             </div>
                                         </figcaption>
                                     </figure>
@@ -241,67 +242,67 @@
             </div>
 
             <!-- 最新上架 -->
-            <div class="layout_cell flex_1">
-                <div class="layout_inner">
-                    <div id="product_new" class="product_inner">
-                        <div class="product_title">
-                            <div class="product_title_container">
+            <div class="layout-cell flex-1">
+                <div class="layout-inner">
+                    <div id="product-new" class="product-inner">
+                        <div class="product-title">
+                            <div class="product-title-container">
                                 <h2>最新上架</h2>
                             </div>
                         </div>
-                        <ul class="product_list">
+                        <ul class="product-list">
                             <li class="product1">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt="">
                                             <button class="addToCart" type="button">
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">木瓜果醬</h3>
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">150</h5>
-                                                <h4 class="product_discount">140</h4>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">木瓜果醬</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">150</h5>
+                                                <h4 class="product-discount">140</h4>
                                             </div>
                                         </figcaption>
                                     </figure>
                                 </a>
                             </li>
                             <li class="product2">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt="">
                                             <button class="addToCart" type="button">
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">蔓越莓果醬</h3>
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">150</h5>
-                                                <h4 class="product_discount">140</h4>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">蔓越莓果醬</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">150</h5>
+                                                <h4 class="product-discount">140</h4>
                                             </div>
                                         </figcaption>
                                     </figure>
                                 </a>
                             </li>
                             <li class="product3">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt="">
                                             <button class="addToCart" type="button">
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">藍莓果醬</h3>
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">150</h5>
-                                                <h4 class="product_discount"></h4>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">藍莓果醬</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">150</h5>
+                                                <h4 class="product-discount"></h4>
                                             </div>
                                         </figcaption>
                                     </figure>
@@ -313,67 +314,67 @@
             </div>
 
             <!-- 生鮮現貨 -->
-            <div class="layout_cell flex_1">
-                <div class="layout_inner">
-                    <div id="product_fresh" class="product_inner">
-                        <div class="product_title">
-                            <div class="product_title_container">
+            <div class="layout-cell flex-1">
+                <div class="layout-inner">
+                    <div id="product-fresh" class="product-inner">
+                        <div class="product-title">
+                            <div class="product-title-container">
                                 <h2>生鮮現貨</h2>
                             </div>
                         </div>
-                        <ul class="product_list">
+                        <ul class="product-list">
                             <li class="product1">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt="">
                                             <button class="addToCart" type="button">
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">月餅</h3>
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">650</h5>
-                                                <h4 class="product_discount"></h4>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">月餅</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">650</h5>
+                                                <h4 class="product-discount"></h4>
                                             </div>
                                         </figcaption>
                                     </figure>
                                 </a>
                             </li>
                             <li class="product2">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt="">
                                             <button class="addToCart" type="button">
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">蔥油餅</h3>
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">200</h5>
-                                                <h4 class="product_discount"></h4>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">蔥油餅</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">200</h5>
+                                                <h4 class="product-discount"></h4>
                                             </div>
                                         </figcaption>
                                     </figure>
                                 </a>
                             </li>
                             <li class="product3">
-                                <a href="" class="product_item">
+                                <a href="" class="product-item">
                                     <figure>
-                                        <div class="product_img">
+                                        <div class="product-img">
                                             <img src="" alt="">
                                             <button class="addToCart" type="button">
 
                                             </button>
                                         </div>
-                                        <figcaption class="product_info">
-                                            <h3 class="product_item_title">芋頭糕</h3>
-                                            <div class="product_forSale">
-                                                <h5 class="product_price">199</h5>
-                                                <h4 class="product_discount"></h4>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芋頭糕</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">199</h5>
+                                                <h4 class="product-discount"></h4>
                                             </div>
                                         </figcaption>
                                     </figure>
