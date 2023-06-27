@@ -1,4 +1,3 @@
-<!-- 商品頁面 -->
 <!DOCTYPE html>
 <html lang="zh-hant-tw">
 
@@ -10,12 +9,12 @@
     <link rel="shortcut icon" href="./images/shanlin_shop_logo_icon.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/marketcart.css">
-        <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
-
+<!-- 商品詳情頁面 -->
 <body>
+    <!-- 頁首-->
     <header>
         <nav class="navbar navbar-light bg-light sticky-top">
             <div class="container-fluid">
@@ -75,8 +74,8 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <form name="search-form" id="search-form" class="d-flex" role="search" action="" name="">
-                            <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="輸入關鍵字" aria-label="Search">
+                        <form name="search-form" id="search-form" class="d-flex" role="search" action="" >
+                            <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="商品搜尋" aria-label="Search">
                             <input type="button" name="submit-btn" id="submit-btn">
                             <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
                         </form>
@@ -144,10 +143,11 @@
                                 <h2>搜尋</h2>
                                 <a class="close" href="#">&times;</a>
                                 <div class="content">
-                                    <form class="d-flex mt-3" role="search" action="" name="">
-                                        <input class="form-control me-2" type="search" placeholder="商品搜尋"
+                                    <form name="search-form" id="search-form" class="d-flex mt-3" role="search" action="" >
+                                        <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="商品搜尋"
                                             aria-label="Search">
-                                        <button class="btn btn-outline-success" type="submit">搜尋</button>
+                                            <input type="button" name="submit-btn" id="submit-btn">
+                                            <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
                                     </form>
                                 </div>
                             </div>
@@ -166,85 +166,209 @@
             </div>
         </nav>
     </header>
+
+    <!-- 頁面內容-->
     <main>
-        <h1>我的購物車</h1>
+        <!-- 熱門商品 -->
+        <section>
+            <!-- div.layout-cell.flex-1>div.layout-inner>div#product-popular.product-inner>(div.product-title>div.product-title-container>h2)+ul.product-list>li.product*3>a.product-item>figure>(div.product-img>img+button.addToCart[type=button])+figcaption.product-info>h3.product-item-title+div.product-forSale>h5.product-price+h4.product-discount -->
+            <div class="layout-cell flex-1">
+                <div class="layout-inner">
+                    <div id="product-popular" class="product-inner">
+                        <div class="product-title">
+                            <div class="product-title-container">
+                                <h2>熱門商品</h2>
+                            </div>
+                        </div>
+                        <ul class="product-list">
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert01_1.jpeg" alt=""> <!-- 商品圖片 -->
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芒果</h3> <!-- 商品名稱 -->
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">100</h5> <!-- 商品價格 -->
+                                                <h4 class="product-discount">80</h4> <!-- 優惠價格 -->
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert02_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">木瓜</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">120</h5>
+                                                <h4 class="product-discount">99</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert03_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芭樂</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">85</h5>
+                                                <h4 class="product-discount">60</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="product-list">
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert01_1.jpeg" alt=""> <!-- 商品圖片 -->
+                                            <button class="addToCart" type="button">
+                                                加入購物車
 
-        <div class="payment-shopping-cart">
-
-            <div class="payment-column-labels">
-                <label class="payment-product-image">預覽圖</label>
-                <label class="payment-product-details">商品詳情</label>
-                <label class="payment-product-price">價格</label>
-                <label class="payment-product-quantity">數量</label>
-                <label class="payment-product-removal">刪除</label>
-                <label class="payment-product-line-price">小計</label>
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芒果</h3> <!-- 商品名稱 -->
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">100</h5> <!-- 商品價格 -->
+                                                <h4 class="product-discount">80</h4> <!-- 優惠價格 -->
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert02_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">木瓜</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">120</h5>
+                                                <h4 class="product-discount">99</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert03_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芭樂</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">85</h5>
+                                                <h4 class="product-discount">60</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="product-list">
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert01_1.jpeg" alt=""> <!-- 商品圖片 -->
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芒果</h3> <!-- 商品名稱 -->
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">100</h5> <!-- 商品價格 -->
+                                                <h4 class="product-discount">80</h4> <!-- 優惠價格 -->
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert02_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">木瓜</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">120</h5>
+                                                <h4 class="product-discount">99</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert03_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芭樂</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">85</h5>
+                                                <h4 class="product-discount">60</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <div class="payment-product">
-                <div class="payment-product-image">
-                    <img src="./images/item_1-1.jpeg">
-                </div>
-                <div class="payment-product-details">
-                    <div class="payment-product-title">藍莓蜂蜜鬆餅</div>
-                    <p class="payment-product-description"></p>
-                </div>
-                <div class="payment-product-price">80</div>
-                <div class="payment-product-quantity">
-                    <input type="number" value="2" min="1">
-                </div>
-                <div class="payment-product-removal">
-                    <button class="payment-remove-product">
-                        刪除
-                    </button>
-                </div>
-                <div class="payment-product-line-price">160</div>
-            </div>
-
-            <div class="payment-product">
-                <div class="payment-product-image">
-                    <img src="./images/item_2-1.jpeg">
-                </div>
-                <div class="payment-product-details">
-                    <div class="payment-product-title">藍莓糖霜鬆餅</div>
-                    <p class="payment-product-description"></p>
-                </div>
-                <div class="payment-product-price">75</div>
-                <div class="payment-product-quantity">
-                    <input type="number" value="1" min="1">
-                </div>
-                <div class="payment-product-removal">
-                    <button class="payment-remove-product">
-                        刪除
-                    </button>
-                </div>
-                <div class="payment-product-line-price">75</div>
-            </div>
-
-            <div class="payment-totals">
-                <div class="payment-totals-item">
-                    <label>小計</label>
-                    <div class="payment-totals-value" id="cart-subtotal">235</div>
-                </div>
-                <div class="payment-totals-item">
-                    <label>折扣</label>
-                    <div class="payment-totals-value" id="cart-tax">0</div>
-                </div>
-                <div class="payment-totals-item">
-                    <label>運費</label>
-                    <div class="payment-totals-value" id="cart-shipping">80</div>
-                </div>
-                <div class="payment-totals-item payment-totals-item-total">
-                    <label>總計</label>
-                    <div class="payment-totals-value" id="cart-total">315</div>
-                </div>
-            </div>
-
-            <button class="payment-checkout">確認購買</button>
-
-        </div>
+        </section>
     </main>
+
+    <!-- 頁尾 -->
     <footer>
-        <small>copyright @ 2023 杉林小舖</small>
+        <div class="bottom">
+            copyright @ 2023 杉林小舖
+        </div>
         <div id="gotop">
             <i class="fa-solid fa-arrow-up"></i>
         </div>
@@ -257,7 +381,6 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <!-- my script -->
-    <script src="./js/marketcart.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

@@ -73,8 +73,9 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <form name="search-form" id="search-form" class="d-flex" role="search" action="" >
-                            <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="商品搜尋" aria-label="Search">
+                        <form name="search-form" id="search-form" class="d-flex" role="search" action="">
+                            <input class="form-control me-2" name="search-text" id="search-text" type="search"
+                                placeholder="商品搜尋" aria-label="Search">
                             <input type="button" name="submit-btn" id="submit-btn">
                             <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
                         </form>
@@ -142,11 +143,12 @@
                                 <h2>搜尋</h2>
                                 <a class="close" href="#">&times;</a>
                                 <div class="content">
-                                    <form name="search-form" id="search-form" class="d-flex mt-3" role="search" action="" >
-                                        <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="商品搜尋"
-                                            aria-label="Search">
-                                            <input type="button" name="submit-btn" id="submit-btn">
-                                            <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
+                                    <form name="search-form" id="search-form" class="d-flex mt-3" role="search"
+                                        action="">
+                                        <input class="form-control me-2" name="search-text" id="search-text"
+                                            type="search" placeholder="商品搜尋" aria-label="Search">
+                                        <input type="button" name="submit-btn" id="submit-btn">
+                                        <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
                                     </form>
                                 </div>
                             </div>
@@ -166,225 +168,92 @@
         </nav>
     </header>
     <main>
-        <section>
-            <!-- div.layout-cell.flex-1>div.layout-inner>div#product-popular.product-inner>(div.product-title>div.product-title-container>h2)+ul.product-list>li.product$*3>a.product-item>figure>(div.product-img>img+button.addToCart[type=button])+figcaption.product-info>h3.product-item-title+div.product-forSale>h5.product-price+h4.product-discount -->
-            <!-- 熱門商品 -->
-            <div class="layout-cell flex-1">
-                <div class="layout-inner">
-                    <div id="product-popular" class="product-inner">
-                        <div class="product-title">
-                            <div class="product-title-container">
-                                <h2>熱門商品</h2>
+        <div class="edit-container">
+            <a class="" href="user.html"><img src="" alt="返回"></a>
+            <form class="well form-horizontal" action=" " method="post" id="contact_form">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend>會員資料填寫</legend>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">姓名</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="first_name" placeholder="姓名" class="form-control" type="text">
                             </div>
                         </div>
-                        <ul class="product-list">
-                            <li class="product1">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt=""> <!-- 商品圖片 -->
-                                            <button class="addToCart" type="button">
-                                                <!-- 加入購物車 -->
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">芒果</h3> <!-- 商品名稱 -->
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">100</h5> <!-- 商品價格 -->
-                                                <h4 class="product-discount">80</h4> <!-- 優惠價格 -->
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="product2">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt="">
-                                            <button class="addToCart" type="button">
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">木瓜</h3>
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">120</h5>
-                                                <h4 class="product-discount">99</h4>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="product3">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt="">
-                                            <button class="addToCart" type="button">
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">芭樂</h3>
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">85</h5>
-                                                <h4 class="product-discount">60</h4>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
-                </div>
-            </div>
 
-            <!-- 最新上架 -->
-            <div class="layout-cell flex-1">
-                <div class="layout-inner">
-                    <div id="product-new" class="product-inner">
-                        <div class="product-title">
-                            <div class="product-title-container">
-                                <h2>最新上架</h2>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">電子郵件</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input name="email" placeholder="E-Mail" class="form-control" type="text">
                             </div>
                         </div>
-                        <ul class="product-list">
-                            <li class="product1">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt="">
-                                            <button class="addToCart" type="button">
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">木瓜果醬</h3>
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">150</h5>
-                                                <h4 class="product-discount">140</h4>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="product2">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt="">
-                                            <button class="addToCart" type="button">
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">蔓越莓果醬</h3>
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">150</h5>
-                                                <h4 class="product-discount">140</h4>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="product3">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt="">
-                                            <button class="addToCart" type="button">
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">藍莓果醬</h3>
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">150</h5>
-                                                <h4 class="product-discount"></h4>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
-                </div>
-            </div>
 
-            <!-- 生鮮現貨 -->
-            <div class="layout-cell flex-1">
-                <div class="layout-inner">
-                    <div id="product-fresh" class="product-inner">
-                        <div class="product-title">
-                            <div class="product-title-container">
-                                <h2>生鮮現貨</h2>
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">手機號</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                <input name="phone" placeholder="0912-345-678" class="form-control" type="text">
                             </div>
                         </div>
-                        <ul class="product-list">
-                            <li class="product1">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt="">
-                                            <button class="addToCart" type="button">
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">月餅</h3>
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">650</h5>
-                                                <h4 class="product-discount"></h4>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="product2">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt="">
-                                            <button class="addToCart" type="button">
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">蔥油餅</h3>
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">200</h5>
-                                                <h4 class="product-discount"></h4>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                            <li class="product3">
-                                <a href="" class="product-item">
-                                    <figure>
-                                        <div class="product-img">
-                                            <img src="" alt="">
-                                            <button class="addToCart" type="button">
-
-                                            </button>
-                                        </div>
-                                        <figcaption class="product-info">
-                                            <h3 class="product-item-title">芋頭糕</h3>
-                                            <div class="product-forSale">
-                                                <h5 class="product-price">199</h5>
-                                                <h4 class="product-discount"></h4>
-                                            </div>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
-                </div>
-            </div>
-        </section>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">地址</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="address" placeholder="地址" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text area -->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Project Description</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                <textarea class="form-control" name="comment"
+                                    placeholder="Project Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success message -->
+                    <div class="alert alert-success" role="alert" id="success_message">Success <i
+                            class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you
+                        shortly.</div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-warning">Send <span
+                                    class="glyphicon glyphicon-send"></span></button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+        </div><!-- /.container -->
     </main>
     <footer>
         <small>copyright @ 2023 杉林小舖</small>
@@ -400,6 +269,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <!-- my script -->
+    <script src="./js/edit.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

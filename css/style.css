@@ -144,11 +144,12 @@ body {
         /*中⽂*/
         "蘋⽅-繁", "PingFang TC", "Noto Sans TC", "⿊體-繁", "Heiti TC", "微軟正⿊體", "Microsoft JhengHei", sans-serif;
     background-color: #f2edf0;
+    background-image: url(../images/body_bg.png);
 }
 
 
 /* header區 */
-.navbar-brand img {
+/* .navbar-brand img {
     width: 20%;
     height: auto;
 }
@@ -157,12 +158,29 @@ body {
     float: right;
     position: relative;
 
+} */
+
+.navbar{
+    height: 1i0px;
+    background-color: transparent;
+    position: fixed;
 }
 
 .nav-item a img {
-    width: 60px;
-    height: auto;
+    /* width: 60px;
+    height: auto; */
+    width: 40px;
+    height: 40px;
+    margin: 5px;
 }
+.top-0{
+    top: 20% !important;
+}
+
+.start-100{
+    left: 80% !important;
+}
+
 
 .box-login {
     /* margin: 0 auto; */
@@ -208,14 +226,19 @@ body {
     text-align: center;
 }
 
+/* .forPc{
+    display: flex;
+} */
+
 .nav-item {
     display: block;
-    width: 100px;
-    margin: 5px;
+    /* width: 100px;
+    margin: 5px; */
+    height: 20px;
 }
 
 
-.btn-outline-success {
+/* .btn-outline-success {
     font-size: 1em;
     padding: 10px;
     text-decoration: none;
@@ -226,7 +249,7 @@ body {
 
 .btn-outline-success:hover {
     background: #06D85F;
-}
+} */
 
 
 
@@ -287,9 +310,26 @@ body {
     z-index: 9999 !important;
 } */
 
+#search-form{
+    position: relative;
+}
+#submit-btn{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    background: url(../images/search_icon_1.svg);
+    background-repeat: no-repeat;  /* 不再重複填滿 */
+    background-color: transparent; /* 背景色改透明 */
+    border: none;  /* 框線取消 */
+}
+
 .carousel-item {
     z-index: -1 !important;
+    height: 100vh;
 }
+
 
 @media screen and (max-width: 700px) {
     .box {
@@ -320,7 +360,9 @@ body {
 
 
 /* 內容區 */
-
+main {
+    min-height: calc(100vh - 25px);
+}
 .layout-cell {
     margin: 0 auto;
     max-height: fit-content;
@@ -443,6 +485,7 @@ body {
 }
 
 footer{
+    height: 25px;
     padding: 10px 5px;
     background-color: #e5f7ef;
     font-size: 16px;
