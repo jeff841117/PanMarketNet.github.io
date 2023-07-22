@@ -41,6 +41,7 @@ function recalculateCart() {
         }
         $('.payment-totals-value').fadeIn(fadeTime);
     });
+    
 }
 
 

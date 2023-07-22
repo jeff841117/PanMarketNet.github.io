@@ -18,4 +18,5 @@ document.getElementById('add-to-cart').addEventListener('click', function() {
 
 document.getElementById('purchase').addEventListener('click', function() {
     alert('購買成功，感謝您的購買！');
+    
 });

@@ -59,7 +59,6 @@ $('#carouselExampleCaptions').on('mouseup', function (event) {
 //         $('.navbar').css("background-color", "rgb(255, 255, 255 , 0.8)");
 //     }
 
-
 //     });
 // 使用节流函数来减少滚动事件处理的频率
 function throttle(func, delay) {
@@ -72,6 +71,7 @@ function throttle(func, delay) {
             }, delay);
         }
     };
+    
 }
 
 $(window).scroll(throttle(function () {

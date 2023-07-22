@@ -72,6 +72,7 @@ document.getElementById("item-form").addEventListener("submit", function(event){
         </td>
     `;
     tbody.appendChild(newRow);
+    
 });
 
 document.getElementById('item-label').addEventListener('change', function(){

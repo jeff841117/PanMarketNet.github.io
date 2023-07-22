@@ -15,7 +15,8 @@ const mockOrderData = [
         remitterBank: "812 台新銀行",
         remitterAccountLastFive: "12345",
         remittanceDate: "2023/07/17",
-        shippingStatus: "已出貨" 
+        shippingStatus: "已出貨"
+        
     }
     // 其他訂單數據...
 ];

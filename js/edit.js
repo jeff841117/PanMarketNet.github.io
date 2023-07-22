@@ -39,5 +39,6 @@ $(document).ready(function () {
         $('#edit-button').show();  // Show edit button 顯示編輯按鈕
         $(this).hide();  // Hide cancel button 隱藏取消按鈕
         $('#save-button').hide();  // Hide save button 隱藏儲存按鈕
+        
     });
 });

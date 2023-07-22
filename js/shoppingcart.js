@@ -32,6 +32,7 @@ cartOverlay.addEventListener('click', (event) => {
 function removeFromCart(productName) {
     delete cart[productName];
     updateCart();
+    
 }
 
 // 加入商品到購物車或更新商品數量

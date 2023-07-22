@@ -39,6 +39,7 @@ function addToCart(productName, price) {
         cart[productName] = { price, quantity: 1 };
     }
     updateCart();
+
 }
 
 // 更新購物車顯示
@@ -51,8 +52,7 @@ function updateCart() {
             const item = cart[productName];
             return `
         <div>${productName} - ${item.quantity} - ${item.price}</div>
-        <button class="removeItem" data-product="${productName}">刪除</button>
-      `;
+        <button class="removeItem" data-product="${productName}">刪除</button>`;
         }).join('');
 
         cartItems.innerHTML = cartContent;

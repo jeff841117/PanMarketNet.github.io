@@ -24,4 +24,5 @@
 /* 將購物車彈窗顯示出來 */
 .cart-open .cart-slide {
     transform: translateX(0%);
+    
 }
