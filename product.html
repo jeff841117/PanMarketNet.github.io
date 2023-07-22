@@ -16,33 +16,78 @@
 <body>
     <!-- 頁首-->
     <header>
-        <nav class="navbar navbar-light bg-light sticky-top">
+    </header>
+        <nav class="navbar navbar-light  sticky-top">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a class="navbar-logo" href="./index.html"><img src="./images/shanlin_shop_logo_icon.png" alt="杉林小舖"></a>
+                <ul class="nav  page-link">
+                    <li class="nav-page">
+                        <a class="nav-link" href="#">熱門商品</a>
+                    </li>
+                    <li class="nav-page">
+                        <a class="nav-link" href="#">最新上架</a>
+                    </li>
+                    <li class="nav-page">
+                        <a class="nav-link" href="#">生鮮現貨</a>
+                    </li>
+                    <li class="nav-page">
+                        <a class="nav-link" href="#">民宿生活</a>
+                    </li>
+                </ul>
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        <div class="offcanvas-top">
+                        <a class="offcanvas-logo" href="./index.html"><img src="./images/shanlin_shop_logo_icon.png"
+                                alt="杉林小舖"></a>
+                        <h3>杉林小舖 Shanlin Shop</h3>
+                            </div>
+                        <button type="button" class="btn-close text-reset " data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
+                    <ul class="offcanvas-href">
+                        <li class="offcanvas-fanHerf">
+                            <a class="offcanvas-icon" href="#"><img src="./images/icon_fb_over.png" alt="粉絲團"></a>
+                        </li>
+                        <li class="offcanvas-fanHerf">
+                            <a class="offcanvas-icon" href="#"><img src="./images/icon_line_over.png" alt="社團"></a>
+                        </li>
+                    </ul>
                     <div class="offcanvas-body">
+                        <div class="offcanvas-area">商品分類</div>
+                        <ul class="offcanvas-navbar">
+                            <li class="offcanvas-page">
+                                <a class="offcanvas-link" href="#">熱門商品</a>
+                            </li>
+                            <li class="offcanvas-page">
+                                <a class="offcanvas-link" href="#">最新上架</a>
+                            </li>
+                            <li class="offcanvas-page">
+                                <a class="offcanvas-link" href="#">生鮮現貨</a>
+                            </li>
+                        </ul>
+                        <div class="offcanvas-area">合作專區</div>
+                        <ul class="offcanvas-navbar">
+                            <li class="offcanvas-page">
+                                <a class="offcanvas-link" href="#">民宿生活</a>
+                            </li>
+                        </ul>
+                        <div class="offcanvas-area">帳戶專區</div>
+                        <a href="#popup" class="offcanvas-button">會員登入</a>
                     </div>
                 </div>
                 <!-- 電腦版nav -->
-                <ul class="nav me-auto mb-2 mb-lg-0 forPc">
-                    <li class="nav-item">
-                        <!-- <a class="nav-link active" aria-current="page" href="#">Active</a> -->
-                    </li>
+                <ul class="nav  mb-2 mb-lg-0 forPc">
                     <li class="nav-item">
                         <a class="nav-link" href="#"><img src="./images/order_paper_icon.svg" alt="查訂單"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#popup1"><img src="./images/login_logo_icon.svg" alt="會員登入"></a>
-                        <div id="popup1" class="overlay">
+                        <a class="nav-link" href="#popup"><img src="./images/login_logo2_icon.svg" alt="會員登入"></a>
+                        <div id="popup" class="overlay">
                             <div class="popup">
                                 <a class="close" href="#">&times;</a>
                                 <div class="content">
@@ -74,99 +119,47 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <form name="search-form" id="search-form" class="d-flex" role="search" action="" >
-                            <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="商品搜尋" aria-label="Search">
-                            <input type="button" name="submit-btn" id="submit-btn">
-                            <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
-                        </form>
+                            <form name="search-form" id="search-form" class="d-flex" role="search" action="">
+                                <input class="form-control me-2" name="search-text" id="search-text" type="search"
+                                    placeholder="商品搜尋" aria-label="Search">
+                                <input type="button" name="submit-btn" id="submit-btn">
+                                <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
+                            </form>
                     </li>
                     <li class="nav-item">
                         <!-- 按鈕5 購物車-->
                         <button type="button" class="btn btn-transparent position-relative">
-                            <a class="nav-link" href="#"><img src="./images/shopping_cart_icon.svg" alt="購物車"></a>
-                            <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">+99
-                                <span class="visually-hidden">unread messages</span></span>
-                        </button>
-                    </li>
-                </ul>
-                <!-- 手機板nav -->
-                <ul class="nav me-auto mb-2 mb-lg-0 forH5">
-                    <!-- 導覽列 -->
-                    <li class="nav-item">
-                        <!-- 按鈕1 (active 表正在作用)-->
-                        <!-- <a class="nav-link active" aria-current="page" href="./index.html">首頁</a> -->
-                    </li>
-                    <li class="nav-item">
-                        <!-- 按鈕2 查訂單-->
-                        <a class="nav-link" href="#"><img src="./images/order_paper_icon.svg" alt="查訂單"></a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- 按鈕3 登入-->
-                        <a class="nav-link" href="#popup1"><img src="./images/login_logo_icon.svg" alt="會員登入"></a>
-                        <div id="popup1" class="overlay">
-                            <div class="popup">
+                            <a class="nav-link" href="#popup1"><img src="./images/shopping_cart_icon.svg" alt="購物車"></a>
+                            <div id="popup1" class="overlay1">
                                 <a class="close" href="#">&times;</a>
-                                <div class="content">
-                                    <div class="box-login">
-                                        <p1>綁定社群帳號，快速登入</p1>
-                                        <a class="button-login" href="">
-                                            <img src="./images/line_logo_icon.png" alt="line icon">
-                                        </a>
-                                        <a class="button-login" href="">
-                                            <img src="./images/facebook_logo_icon.png" alt="fb icon">
-                                        </a>
-                                        <div class="alert">
-                                            <p>請您在使用本網站前，確認您已審閱並同意本隱私權政策所列舉之全部條款。若您有任何不同意之處，則請勿使用本網站之服務。本隱私權政策僅適用於本網站對您個人資料的蒐集、處理和應用。<br>
-                                                此外也會保留您在上網瀏覽或查詢時，伺服器自行產生的相關記錄，包括IP位址、Cookie紀錄、使用時間、使用的瀏覽器、瀏覽及點選資料紀錄等。<br>
-                                                本網站蒐集得來的個人資料，都用於以下用途：對諮詢、商談、修改、補充的對應、確認及記錄；寄送與商品、服務、活動等訊息相關的宣傳品及電子郵件；
-                                                商品配送；以及商品開發及其他服務的改善。本公司之員工，僅於其為您提供產品或服務之需求範圍內，對於您的個人資料得為有限之接觸。<br>
-                                                本公司之員工，僅於其為您提供產品或服務之需求範圍內，對於您的個人資料得為有限之接觸。<br>
-                                                當蒐集個人資料之目的消失或期限屆滿時，您可要求刪除、停止處理或利用個人資料，為了保護您的帳戶及個人資料的安全，
-                                                請您不要任意將個人帳號、密碼提供予第三人獲允許第三人以您的個人資料申請帳號、密碼，否則相關責任由您自行承擔。<br>
-                                                本公司僅與提供下列服務的公司分享個人資料，
-                                                諸如：資料處理、完成客戶訂單、產品運送、管理及提升客戶資料、提供客戶服務、評估你對我們產品與服務的興趣、進行客戶研究或滿意度調查，該公司有義務保護你的資料，其可能位於品牌營運的任何地方。<br>
-                                                若您對本隱私權保護政策有任何問題，請直接與本公司聯繫。<br>
-                                                您在本網站所進行的所有線上訂購、交易或行為，以及本約定條款及相關網頁上之約定，都以中華民國法令為準據法。
-                                                因本契約發生訴訟時，雙方同意以台灣台北地方法院為第一審管轄法院。契約條款如有疑議時，應為有利消費者之解釋。</p>
+                                <div class="popup1">
+                                    <div class="content">
+                                        <div class="box-shoppingCart">
+                                            <h4>我的購物車</h4>
+                                            <div class="box-shoppingCart">
+                                                購物車內並無商品
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <!-- 按鈕4 搜尋-->
-                        <a class="nav-link" href="#popup2"><img src="./images/search_icon.svg" alt="搜尋"></a>
-                        <div id="popup2" class="overlay">
-                            <div class="popup">
-                                <h2>搜尋</h2>
-                                <a class="close" href="#">&times;</a>
-                                <div class="content">
-                                    <form name="search-form" id="search-form" class="d-flex mt-3" role="search" action="" >
-                                        <input class="form-control me-2" name="search-text" id="search-text" type="search" placeholder="商品搜尋"
-                                            aria-label="Search">
-                                            <input type="button" name="submit-btn" id="submit-btn">
-                                            <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <!-- 按鈕5 購物車-->
-                        <button type="button" class="btn btn-transparent position-relative">
-                            <a class="nav-link" href="#"><img src="./images/shopping_cart_icon.svg" alt="購物車"></a>
                             <span
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">+99
-                                <span class="visually-hidden">unread messages</span></span>
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
                         </button>
                     </li>
                 </ul>
             </div>
+            <ul id="fanButtom" class="nav  mb-2 mb-lg-0 forPc ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./images/icon_fb_over.png" alt="社團"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./images/icon_line_over.png" alt="社群"></a>
+                </li>
+            </ul>
         </nav>
-    </header>
-
     <!-- 頁面內容-->
     <main>
         <!-- 熱門商品 -->

@@ -46,9 +46,51 @@ $('#carouselExampleCaptions').on('mouseup', function (event) {
     $('#carouselExampleCaptions').carousel('cycle');
 });
 
+// 滑動出現narbar顏色
+// $(window).scroll(function () {
+
+//     if ($(this).scrollTop() == 0 && $(window).width() > 991 ) {
+//         $('.navbar').css("background-color", "transparent");
+//     } 
+//     else if( $(window).width() < 991) {
+//         $('.navbar').css("background-color", "rgba(46, 184, 103, 0.769)");
+//     }
+//     else {
+//         $('.navbar').css("background-color", "rgb(255, 255, 255 , 0.8)");
+//     }
+
+
+//     });
+// 使用节流函数来减少滚动事件处理的频率
+function throttle(func, delay) {
+    let timeoutId;
+    return function (...args) {
+        if (!timeoutId) {
+            timeoutId = setTimeout(() => {
+                func.apply(this, args);
+                timeoutId = null;
+            }, delay);
+        }
+    };
+}
+
+$(window).scroll(throttle(function () {
+    const scrollTop = $(this).scrollTop();
+    const windowWidth = $(this).width();
+    const navbar = $('.navbar');
+
+    if (scrollTop === 0 && windowWidth > 991) {
+        navbar.css("background-color", "transparent");
+    } else if (windowWidth < 991) {
+        navbar.css("background-color", "rgba(46, 184, 103, 0.769)");
+    } else {
+        navbar.css("background-color", "rgb(255, 255, 255 , 0.8)");
+    }
+}, 200)); // 在滚动事件中添加了200毫秒的节流时间
+
 // 滑動頂點
 $('#gotop').click(function () {
-    $('html,body').animate({ scrollTop: 0 }, 1000);
+    $('html,body').animate({ scrollTop: 0 }, 0);
 });
 
 // 置頂按鈕淡出淡入
@@ -59,3 +101,5 @@ $(window).scroll(function () {
         $('#gotop').fadeOut();
     }
 });
+
+

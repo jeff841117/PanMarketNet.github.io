@@ -1,0 +1,205 @@
+/* 將頁面的背景色設定為深藍色 */
+body {
+    background-color: #f8f8f8;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 設定表格在版面中間且具有一定的外邊距 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: 2px solid #30363D; /* 表格範圍以有色框線顯示 */
+    border-radius: 5px; /* 稍微圓角處理 */
+    background-color: #ecedd2; 
+}
+
+.data-inner {
+    padding: 2em;
+    background-color: #161B22;
+    border-radius: 5px;
+    color: #C9D1D9;
+}
+
+.menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 3px;
+    background: #000000;
+}
+.offcanvas-title{
+    font-size: 30px;
+    box-shadow: 4px 3px 0px;
+    color:black;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-links{
+    margin: 20px 0;
+    padding: 0;
+}
+
+.nav-page{
+    margin: 20px 0;
+}
+
+.nav-links a{
+    font-size: 18px;
+    color: black;
+    text-decoration:none;
+}
+
+.data-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+button.addNewItem {
+    background-color: #1cc82d;
+    color: #0D1117;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button.addNewItem:hover {
+    background-color: #83bfff;
+}
+
+form.search-item {
+    display: flex;
+    align-items: center;
+}
+
+form.search-item label.search-title {
+    margin-right: 1em;
+}
+
+form.search-item input[type="search"] {
+    margin-right: 1em;
+}
+
+form.search-item input[type="date"] {
+    margin-right: 1em;
+}
+
+button.item-search-button {
+    background-color: #58A6FF;
+    color: #0D1117;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button.item-search-button:hover {
+    background-color: #83bfff;
+}
+
+.list-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.list-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+.page-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.page-link li a {
+    color: #58A6FF;
+    text-decoration: none;
+}
+
+.page-link li a:hover {
+    color: #83bfff;
+}
+
+/* 將表格設為自適應且具有一定的內邊距 */
+table {
+    width: 100%;
+    max-width: 100%;
+    padding: 1em;
+    margin: auto;
+    border-collapse: collapse;
+    color: #000000;
+}
+
+/* 設定表格的樣式 */
+table th {
+    text-align: center;
+    border: 1px solid #30363D;
+    padding: 8px;
+    background-color: #1F2937;
+    color: #58A6FF;
+}
+
+table td {
+    text-align: center;
+    border: 1px solid #30363D;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #21262D;
+}
+
+table tr:hover {
+    background-color: #30363D;
+}
+
+/* 設定新增商品的彈窗樣式 */
+.overlay-item {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999 !important;
+}
+
+.overlay-item:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-item {
+    margin: 70px auto;
+    padding: 20px;
+    background: #1F2937;
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    color: #C9D1D9;
+}

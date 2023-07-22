@@ -147,32 +147,124 @@ body {
     background-image: url(../images/body_bg.png);
 }
 
-
 /* header區 */
-/* .navbar-brand img {
-    width: 20%;
-    height: auto;
-}
-
-.collapse navbar-collapse {
-    float: right;
-    position: relative;
-
-} */
 
 .navbar{
-    height: 1i0px;
+    width: 100%;
+    height: 100px;
     background-color: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+.container-fluid{
+    width: 1200px;
+}
+.navbar-toggler{
+    z-index: 10;
+    border: solid 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0; 
+}
+
+.navbar-logo {
     position: fixed;
 }
 
+.navbar-logo img{
+    height: 70px;
+    width: 70px;
+}
+
+.page-link{
+    display: flex;
+    position: fixed;
+    transform: translateX(120px);
+}
+
+.nav-page a{
+    margin: 0 10px ;
+    color: black;
+}
+
+.nav-page a:hover{
+    color: orange;
+}
+
+.offcanvas-header{
+    padding: 0;
+    margin: 10px 15px ;
+    display:flex;
+}
+.offcanvas-top{
+    display: flex;
+    align-items: center;
+}
+
+.offcanvas-top h3{
+    margin-left: 20px;
+}
+
+.offcanvas-logo  img{
+    height: 40px;
+    width: 40px;
+}
+
+.offcanvas-href{
+    display: flex;
+    margin: 0 10px;
+}
+
+.offcanvas-icon{
+    margin: 0 3px;
+}
+
+.offcanvas-icon img{
+    height: 30px;
+    width: 30px;
+}
+
+.offcanvas-area{
+    font-size: 30px;
+    box-shadow: 4px 3px 0px;
+}
+
+.offcanvas-page{
+    margin: 20px 0;
+}
+
+.offcanvas-link{
+    font-size: 18px;
+    color: black;
+    text-decoration:none;
+}
+
+.offcanvas-button{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    color: black;
+    background-color: rgb(250, 235, 215);
+    appearance: button;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+a.offcanvas-button:hover{
+    color: black;
+}
+
 .nav-item a img {
-    /* width: 60px;
-    height: auto; */
     width: 40px;
     height: 40px;
     margin: 5px;
 }
+
 .top-0{
     top: 20% !important;
 }
@@ -181,9 +273,7 @@ body {
     left: 80% !important;
 }
 
-
 .box-login {
-    /* margin: 0 auto; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -195,7 +285,6 @@ body {
     margin: 30px;
 
 }
-
 
 .alert {
     font-size: 1rem;
@@ -214,44 +303,19 @@ body {
 }
 
 .button-login {
-
     flex-direction: row;
 }
 
-
 .box {
-
     margin: 0 auto;
     background-clip: padding-box;
     text-align: center;
 }
 
-/* .forPc{
-    display: flex;
-} */
-
 .nav-item {
     display: block;
-    /* width: 100px;
-    margin: 5px; */
-    height: 20px;
+    height: 70px;
 }
-
-
-/* .btn-outline-success {
-    font-size: 1em;
-    padding: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-
-}
-
-.btn-outline-success:hover {
-    background: #06D85F;
-} */
-
-
 
 .overlay {
     position: fixed;
@@ -279,7 +343,6 @@ body {
     width: 60%;
     position: relative;
     transition: all 5s ease-in-out;
-    /* z-index: 9999 !important; */
 }
 
 .popup h2 {
@@ -302,16 +365,12 @@ body {
 
 .popup .close:hover {
     color: #06D85F;
+    color: #0a9444a4;
 }
-
-/* .popup .content {
-    height: 50%;
-    overflow: auto;
-    z-index: 9999 !important;
-} */
 
 #search-form{
     position: relative;
+    margin: 20px 0px 0px 10px;
 }
 #submit-btn{
     position: absolute;
@@ -325,9 +384,75 @@ body {
     border: none;  /* 框線取消 */
 }
 
+.overlay1 {
+    position: fixed;
+    left: 0;
+    right: 0;
+    transition: opacity 100ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999 !important;
+}
+
+.overlay1:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup1 {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup1 h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.popup1 .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup1 .close:hover {
+    color: #06D85F;
+    color: #0a9444a4;
+}
+
+
+
 .carousel-item {
     z-index: -1 !important;
     height: 100vh;
+}
+
+.forH5{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    transform: translateX(30px);
+}
+
+#fanButtom{
+    position: fixed;
+    right: -15px;
+    bottom: 120px;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
 }
 
 
@@ -341,22 +466,77 @@ body {
     }
 
 }
-
-@media (max-width:991px) {
-    ul.nav.me-auto.forPc {
-        /* 991-992 */
-        visibility: hidden;
+@media (max-width:1095px) {
+    .nav-page > .nav-link{
+        padding: 10px;
+    }
+    .carousel-item {
+        height: 60vh;
     }
 }
 
+@media (max-width:1045px) {
+    .nav-page > .nav-link{
+        padding: 2px;
+    }
+    .carousel-item {
+        height: 50vh;
+    }
+}
+
+ /* 991-992 */
+@media (max-width:991px) {
+    .navbar-logo{
+        visibility: hidden;
+    }
+    .page-link{
+        visibility: hidden;
+    }
+    #fanButtom{
+        visibility: hidden;
+    }
+    .carousel-item {
+        height: 40vh;
+    }
+    .navbar{
+        background-color: rgba(46, 184, 103, 0.769);
+        height: 70px;
+        padding: 0;
+    }
+}
 
 @media (min-width:992px) {
-    ul.nav.me-auto.forH5 {
-        /* 991-992 */
+    .navbar-toggler{
+        visibility: hidden;
+    }
+    .forH5{
         visibility: hidden;
     }
 }
 
+@media (max-width:591px) {
+    .form-control {
+        width: 180px;
+    }
+}
+
+@media (max-width:565px) {
+    .form-control {
+        width: 120px;
+    }
+}
+
+@media (max-width:505px) {
+    .btn-transparent{
+        width: 100px;
+    }
+}
+
+@media (max-width:499px) {
+    .btn-transparent{
+        width: 100px;
+    }
+}
 
 
 /* 內容區 */
@@ -384,20 +564,12 @@ main {
     padding-left: 45%;
 }
 
-/* .product-title-container:before {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 6px;
-    left: 0px;
-} */
 .product-list {
     margin: 0px -10px;
     padding-left: 120px;
     padding-right: 120px;
     display: flex;
     justify-content: center;
-
 }
 
 .product {
@@ -461,8 +633,59 @@ main {
     justify-content: center;
     font-size: 16px;
     color: #333;
-    
+    background-color: antiquewhite;
 }
+
+.product-forSale {
+    position: relative;
+}
+
+.discount-label {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #e91e63;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.product-price {
+    text-decoration: line-through; /* 添加删除线 */
+    margin-right: 10px; /* 为了让優惠價格紧挨着商品价格，可以调整此间距 */
+}
+
+@media (max-width:1440px) {
+    .product-list {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media (max-width:991px) {
+    .product-list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media (max-width:768px) {
+    .product-list .product:nth-child(n+3){
+        display: none;
+    }
+    .product {
+        width: 35%;
+    }
+}
+
+@media (max-width:565px) {
+    .product {
+        width: 40%;
+    }
+}
+
+@media (max-width:505px) {
+}
+
 
 
 /* footer區 */
@@ -485,11 +708,12 @@ main {
 }
 
 footer{
-    height: 25px;
+    height: 40px;
     padding: 10px 5px;
     background-color: #e5f7ef;
     font-size: 16px;
     text-align: center;
+
 }
 
 /* 版尾 */

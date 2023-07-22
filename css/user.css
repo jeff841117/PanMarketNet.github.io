@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(to right, lightgreen, palegreen); 淡綠色漸變背景 */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 使漸變色背景滿屏 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffe0; /* 淡黃色背景 */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+}
+
+#header, #user-info, #nav-buttons, #footer {
+    width: 100%;
+}
+
+#header {
+    text-align: center;
+    /* padding: 20px; */
+    background-color: #f8f8f8;
+}
+
+#user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#user-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#nav-buttons a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    margin: 10px;
+}
+
+#nav-buttons img {
+    height: 20px;
+    width: 20px;
+}
+
+#footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+}

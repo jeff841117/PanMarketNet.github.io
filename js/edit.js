@@ -1,128 +1,43 @@
 $(document).ready(function () {
-    $("#contact_form")
-        .bootstrapValidator({
-            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-            feedbackIcons: {
-                valid: "glyphicon glyphicon-ok",
-                invalid: "glyphicon glyphicon-remove",
-                validating: "glyphicon glyphicon-refresh"
-            },
-            fields: {
-                first_name: {
-                    validators: {
-                        stringLength: {
-                            min: 2
-                        },
-                        notEmpty: {
-                            message: "Please supply your first name"
-                        }
-                    }
-                },
-                last_name: {
-                    validators: {
-                        stringLength: {
-                            min: 2
-                        },
-                        notEmpty: {
-                            message: "Please supply your last name"
-                        }
-                    }
-                },
-                email: {
-                    validators: {
-                        notEmpty: {
-                            message: "Please supply your email address"
-                        },
-                        emailAddress: {
-                            message: "Please supply a valid email address"
-                        }
-                    }
-                },
-                phone: {
-                    validators: {
-                        notEmpty: {
-                            message: "Please supply your phone number"
-                        },
-                        phone: {
-                            country: "US",
-                            message: "Please supply a vaild phone number with area code"
-                        }
-                    }
-                },
-                address: {
-                    validators: {
-                        stringLength: {
-                            min: 8
-                        },
-                        notEmpty: {
-                            message: "Please supply your street address"
-                        }
-                    }
-                },
-                city: {
-                    validators: {
-                        stringLength: {
-                            min: 4
-                        },
-                        notEmpty: {
-                            message: "Please supply your city"
-                        }
-                    }
-                },
-                state: {
-                    validators: {
-                        notEmpty: {
-                            message: "Please select your state"
-                        }
-                    }
-                },
-                zip: {
-                    validators: {
-                        notEmpty: {
-                            message: "Please supply your zip code"
-                        },
-                        zipCode: {
-                            country: "US",
-                            message: "Please supply a vaild zip code"
-                        }
-                    }
-                },
-                comment: {
-                    validators: {
-                        stringLength: {
-                            min: 10,
-                            max: 200,
-                            message:
-                                "Please enter at least 10 characters and no more than 200"
-                        },
-                        notEmpty: {
-                            message: "Please supply a description of your project"
-                        }
-                    }
-                }
-            }
-        })
-        .on("success.form.bv", function (e) {
-            $("#success_message").slideDown({ opacity: "show" }, "slow"); // Do something ...
-            $("#contact_form").data("bootstrapValidator").resetForm();
+    let originalData = {}; // Store original data 儲存原始資料
 
-            // Prevent form submission
-            e.preventDefault();
+    // Click event for edit button 編輯按鈕的點擊事件
+    $('#edit-button').on('click', function (e) {
+        e.preventDefault();
+        // Store original data 儲存原始資料
+        originalData = {
+            'edit-name': $('#edit-name').val(),
+            'edit-email': $('#edit-email').val(),
+            'edit-phone': $('#edit-phone').val(),
+            'edit-address': $('#edit-address').val()
+        };
+        $('#edit_form input').prop('readonly', false);  // Make inputs editable 讓輸入欄位可編輯
+        $(this).hide();  // Hide edit button 隱藏編輯按鈕
+        $('#save-button, #cancel-button').show();  // Show save and cancel buttons 顯示儲存與取消按鈕
+    });
 
-            // Get the form instance
-            var $form = $(e.target);
+    // Click event for save button 儲存按鈕的點擊事件
+    $('#save-button').on('click', function (e) {
+        e.preventDefault();
+        $('#edit_form input').prop('readonly', true);  // Make inputs read-only 讓輸入欄位回到只讀狀態
+        $('#edit-button').show();  // Show edit button 顯示編輯按鈕
+        $(this).hide();  // Hide save button 隱藏儲存按鈕
+        $('#cancel-button').hide();  // Hide cancel button 隱藏取消按鈕
+        alert('已修改！');  // Alert the user 顯示提示信息
+        // Here, you would normally send the updated data to your server 這裡，你通常會將更新的數據傳送到你的伺服器
+    });
 
-            // Get the BootstrapValidator instance
-            var bv = $form.data("bootstrapValidator");
-
-            // Use Ajax to submit form data
-            $.post(
-                $form.attr("action"),
-                $form.serialize(),
-                function (result) {
-                    console.log(result);
-                },
-                "json"
-            );
-        });
+    // Click event for cancel button 取消按鈕的點擊事件
+    $('#cancel-button').on('click', function (e) {
+        e.preventDefault();
+        // Restore original data 恢復原始資料
+        $('#edit-name').val(originalData['edit-name']);
+        $('#edit-email').val(originalData['edit-email']);
+        $('#edit-phone').val(originalData['edit-phone']);
+        $('#edit-address').val(originalData['edit-address']);
+        $('#edit_form input').prop('readonly', true);  // Make inputs read-only 讓輸入欄位回到只讀狀態
+        $('#edit-button').show();  // Show edit button 顯示編輯按鈕
+        $(this).hide();  // Hide cancel button 隱藏取消按鈕
+        $('#save-button').hide();  // Hide save button 隱藏儲存按鈕
+    });
 });

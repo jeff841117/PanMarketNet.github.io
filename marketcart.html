@@ -1,1 +1,42 @@
-<!-- 購物車頁面 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>購物網站 - 購物車</title>
+    <link rel="stylesheet" href="./css/shoppingcart.css">
+</head>
+<body>
+    <h1>歡迎來到我們的購物網站</h1>
+
+    <div id="products">
+        <h2>商品列表：</h2>
+        <!-- 在這裡列出您的商品，每個商品都有自己的 data 屬性來存儲商品信息 -->
+        <div>
+            <span>商品名稱1 - 價格：$100</span>
+            <button class="add-to-cart-btn" data-product="商品名稱1" data-price="100">加入購物車</button>
+        </div>
+        <div>
+            <span>商品名稱2 - 價格：$50</span>
+            <button class="add-to-cart-btn" data-product="商品名稱2" data-price="50">加入購物車</button>
+        </div>
+        <!-- 以此類推，添加更多商品 -->
+    </div>
+
+    <!-- 購物車按鈕 -->
+<button id="cart-btn">購物車</button>
+
+<!-- 購物車彈窗 -->
+<div id="cart-overlay" class="overlay">
+    <div id="cart" class="cart-slide">
+        <h2>購物車：</h2>
+        <ul id="cart-items">
+            <!-- 購物車內容將在這裡動態生成 -->
+        </ul>
+        <p id="total">總價格：$0</p>
+        <button id="checkout-btn">結帳</button>
+        <button id="close-cart-btn">關閉購物車</button>
+    </div>
+</div>
+
+    <script src="./js/shoppingcart.js"></script>
+</body>
+</html>
