@@ -534,7 +534,7 @@ a.offcanvas-button:hover{
         height: 75vh;
     } */
     .navbar{
-        background-color: rgba(78, 142, 105,);
+        background-color: rgba(78, 142, 105, 0.509);
         height: 70px;
         padding: 0;
         position:sticky;
@@ -680,20 +680,13 @@ main {
 .product-info {
     display: flex;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     background-color: antiquewhite;
-    height: 40px;
-    align-items: center;
-}
-.product-item-title{
-    width: 100%;
 }
 
 .product-forSale {
     position: relative;
-    display: flex;
-    flex-direction: row;
 }
 
 .discount-label {

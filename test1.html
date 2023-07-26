@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>杉林小舖</title>
 
-    <link rel="shortcut icon" href="./images/shanlin_shop_logo_icon.png" />
+    <link rel="shortcut icon" href="./images/shanlin_shop_logo_icon1.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="./css/shoppingcart.css"> -->
     <link rel="stylesheet" href="./css/style1.css">
 
 </head>
@@ -78,15 +79,33 @@
                     </ul>
                     <div class="offcanvas-area">帳戶專區</div>
                     <a href="#popup" class="offcanvas-button">會員登入</a>
+                    <ul class="offcanvas-navbar forItem">
+                        <li class="offcanvas-page">
+                            <a class="nav-link" href="#"><img src="./images/order_paper_icon.svg" alt="查訂單"></a>
+                        </li>
+                        <li class="offcanvas-page">
+                            <a class="nav-link" href="#popup"><img src="./images/login_logo2_icon.svg" alt="會員登入"></a>
+                        </li>
+                        <li class="offcanvas-page">
+                            <form name="search-form" id="search-form" class="d-flex" role="search" action="">
+                                <input class="form-control me-2" name="search-text" id="search-text" type="search"
+                                    placeholder="商品搜尋" aria-label="Search">
+                                <input type="button" name="submit-btn" id="submit-btn">
+                            </form>
+                        </li>
+                        <li class="offcanvas-page">
+                            <a class="nav-link" href="#popup1"><img src="./images/shopping_cart_icon.svg" alt="購物車"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- nav -->
-            <ul class="nav  mb-2 mb-lg-0 forPc">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="./images/order_paper_icon.svg" alt="查訂單"></a>
+            <!-- 電腦版nav -->
+            <ul class="nav   mb-lg-0 forPc">
+                <li class="nav-item img1">
+                    <a class="nav-link" href="#"><img  src="./images/order_paper_icon1.svg" alt="查訂單"></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#popup"><img src="./images/login_logo2_icon.svg" alt="會員登入"></a>
+                <li class="nav-item img2" >
+                    <a class="nav-link" href="#popup"><img  src="./images/login_logo2_icon1.svg" alt="會員登入"></a>
                     <div id="popup" class="overlay">
                         <div class="popup">
                             <a class="close" href="#">&times;</a>
@@ -126,10 +145,10 @@
                             <!-- <button class="btn btn-outline-secondary" style="width: 70px;" type="submit">搜尋</button> -->
                         </form>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item img3">
                     <!-- 按鈕5 購物車-->
-                    <button type="button" class="btn btn-transparent position-relative">
-                        <a class="nav-link" href="#popup1"><img src="./images/shopping_cart_icon.svg" alt="購物車"></a>
+                    <button type="button" class="btn btn-transparent position-relative nav-cart">
+                        <a class="nav-link" href="#popup1"><img  src="./images/shopping_cart_icon1.svg" alt="購物車"></a>
                         <div id="popup1" class="overlay1">
                             <a class="close" href="#">&times;</a>
                             <div class="popup1">
@@ -145,365 +164,290 @@
                         </div>
                         <span
                             class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">+99
-                            <span class="visually-hidden">unread messages</span></span>
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
                     </button>
                 </li>
             </ul>
         </div>
-        <ul id="fanButtom" class="nav  mb-2 mb-lg-0 forPc ">
-            <li class="nav-item">
+        <ul id="fanButtom" class="nav  mb-2 mb-lg-0  ">
+            <li class="nav-itemIcon">
                 <a class="nav-link" href="#"><img src="./images/icon_fb_over.png" alt="社團"></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-itemIcon">
                 <a class="nav-link" href="#"><img src="./images/icon_line_over.png" alt="社群"></a>
             </li>
         </ul>
     </nav>
     <main>
-        <div class="edit-container">
-            <a class="" href="user.html"><img src="" alt="返回"></a>
-            <form class="well form-horizontal" action=" " method="post" id="contact_form">
-                <fieldset>
-
-                    <!-- Form Name -->
-                    <legend>會員資料填寫</legend>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">姓名</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" placeholder="姓名" class="form-control" type="text">
-                            </div>
-                        </div>
+        <!-- bootstrap Carousel With captions 換圖輪播 -->
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="7000" data-bs-pause="false">
+            <!-- 圖片選項按鈕 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <!-- 圖片列 -->
+            <div class="carousel-inner">
+                <!-- 圖片div1 -->
+                <div class="carousel-item active">
+                    <img src="./images/banner_1.jpg" class="d-block w-100 mx-auto" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
                     </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">電子郵件</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="E-Mail" class="form-control" type="text">
-                            </div>
-                        </div>
+                </div>
+                <!-- 圖片div2 -->
+                <div class="carousel-item">
+                    <img src="./images/banner_2.jpg" class="d-block w-100 mx-auto" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
                     </div>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">手機號</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" placeholder="0912-345-678" class="form-control" type="text">
-                            </div>
-                        </div>
+                </div>
+                <!-- 圖片div3 -->
+                <div class="carousel-item">
+                    <img src="./images/banner_3.jpg" class="d-block w-100 mx-auto" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
                     </div>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">地址</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="address" placeholder="地址" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text area -->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Project Description</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <textarea class="form-control" name="comment"
-                                    placeholder="Project Description"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Success message -->
-                    <div class="alert alert-success" role="alert" id="success_message">Success <i
-                            class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you
-                        shortly.</div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label"></label>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning">Send <span
-                                    class="glyphicon glyphicon-send"></span></button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
+                </div>
+            </div>
+            <!-- 換圖按鈕 -->
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        </div><!-- /.container -->
-        <div class="edit-container">
-            <a class="" href="user.html"><img src="" alt="返回"></a>
-            <form class="well form-horizontal" action=" " method="post" id="contact_form">
-                <fieldset>
 
-                    <!-- Form Name -->
-                    <legend>會員資料填寫</legend>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">姓名</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" placeholder="姓名" class="form-control" type="text">
+        <!-- 熱門商品 -->
+        <section>
+            <!-- div.layout-cell.flex-1>div.layout-inner>div#product-popular.product-inner>(div.product-title>div.product-title-container>h2)+ul.product-list>li.product*3>a.product-item>figure>(div.product-img>img+button.addToCart[type=button])+figcaption.product-info>h3.product-item-title+div.product-forSale>h5.product-price+h4.product-discount -->
+            <div class="layout-cell flex-1">
+                <div class="layout-inner">
+                    <div id="product-popular" class="product-inner">
+                        <div class="product-title">
+                            <div class="product-title-container">
+                                <h2>熱門商品</h2>
                             </div>
                         </div>
+                        <ul class="product-list">
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert01_1.jpeg" alt=""> <!-- 商品圖片 -->
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芒果</h3> <!-- 商品名稱 -->
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">100</h5> <!-- 商品價格 -->
+                                                <div class="discount-label">特價</div>
+                                                <h4 class="product-discount">80</h4> <!-- 優惠價格 -->
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert02_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">木瓜</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">120</h5>
+                                                <h4 class="product-discount">99</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert03_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芭樂</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">85</h5>
+                                                <h4 class="product-discount">60</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">電子郵件</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="E-Mail" class="form-control" type="text">
+                </div>
+            </div>
+        </section>
+        <!-- 最新上架 -->
+        <section>
+            <div class="layout-cell flex-1">
+                <div class="layout-inner">
+                    <div id="product-new" class="product-inner">
+                        <div class="product-title">
+                            <div class="product-title-container">
+                                <h2>最新上架</h2>
                             </div>
                         </div>
+                        <ul class="product-list">
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert01_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">木瓜果醬</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">150</h5>
+                                                <h4 class="product-discount">140</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert02_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">蔓越莓果醬</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">150</h5>
+                                                <h4 class="product-discount">140</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert03_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">藍莓果醬</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">150</h5>
+                                                <h4 class="product-discount">120</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">手機號</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" placeholder="0912-345-678" class="form-control" type="text">
+        <!-- 生鮮現貨 -->
+        <section>
+            <div class="layout-cell flex-1">
+                <div class="layout-inner">
+                    <div id="product-fresh" class="product-inner">
+                        <div class="product-title">
+                            <div class="product-title-container">
+                                <h2>生鮮現貨</h2>
                             </div>
                         </div>
+                        <ul class="product-list">
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert01_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">月餅</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">650</h5>
+                                                <h4 class="product-discount">22</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert02_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">蔥油餅</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">200</h5>
+                                                <h4 class="product-discount">250</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="product">
+                                <a href="" class="product-item">
+                                    <figure>
+                                        <div class="product-img">
+                                            <img src="./images/dessert03_1.jpeg" alt="">
+                                            <button class="addToCart" type="button">
+                                                加入購物車
+                                            </button>
+                                        </div>
+                                        <figcaption class="product-info">
+                                            <h3 class="product-item-title">芋頭糕</h3>
+                                            <div class="product-forSale">
+                                                <h5 class="product-price">199</h5>
+                                                <h4 class="product-discount">230</h4>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">地址</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="address" placeholder="地址" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text area -->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Project Description</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <textarea class="form-control" name="comment"
-                                    placeholder="Project Description"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Success message -->
-                    <div class="alert alert-success" role="alert" id="success_message">Success <i
-                            class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you
-                        shortly.</div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label"></label>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning">Send <span
-                                    class="glyphicon glyphicon-send"></span></button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
-        </div>
-        </div><!-- /.container -->
-        <div class="edit-container">
-            <a class="" href="user.html"><img src="" alt="返回"></a>
-            <form class="well form-horizontal" action=" " method="post" id="contact_form">
-                <fieldset>
-
-                    <!-- Form Name -->
-                    <legend>會員資料填寫</legend>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">姓名</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" placeholder="姓名" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">電子郵件</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="E-Mail" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">手機號</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" placeholder="0912-345-678" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">地址</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="address" placeholder="地址" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text area -->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Project Description</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <textarea class="form-control" name="comment"
-                                    placeholder="Project Description"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Success message -->
-                    <div class="alert alert-success" role="alert" id="success_message">Success <i
-                            class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you
-                        shortly.</div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label"></label>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning">Send <span
-                                    class="glyphicon glyphicon-send"></span></button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
-        </div>
-        </div><!-- /.container -->
-        <div class="edit-container">
-            <a class="" href="user.html"><img src="" alt="返回"></a>
-            <form class="well form-horizontal" action=" " method="post" id="contact_form">
-                <fieldset>
-
-                    <!-- Form Name -->
-                    <legend>會員資料填寫</legend>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">姓名</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" placeholder="姓名" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">電子郵件</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="E-Mail" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">手機號</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" placeholder="0912-345-678" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text input-->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">地址</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="address" placeholder="地址" class="form-control" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Text area -->
-
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Project Description</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <textarea class="form-control" name="comment"
-                                    placeholder="Project Description"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Success message -->
-                    <div class="alert alert-success" role="alert" id="success_message">Success <i
-                            class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you
-                        shortly.</div>
-
-                    <!-- Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label"></label>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning">Send <span
-                                    class="glyphicon glyphicon-send"></span></button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
-        </div>
-        </div><!-- /.container -->
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <small>copyright @ 2023 杉林小舖</small>
@@ -519,6 +463,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <!-- my script -->
+    <!-- <script src="./js/shoppingcart1.js"></script> -->
     <script src="./js/script.js"></script>
 </body>
 

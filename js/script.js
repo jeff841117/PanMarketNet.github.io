@@ -60,7 +60,6 @@ $('#carouselExampleCaptions').on('mouseup', function (event) {
 //     }
 
 //     });
-// 使用节流函数来减少滚动事件处理的频率
 function throttle(func, delay) {
     let timeoutId;
     return function (...args) {
@@ -74,19 +73,44 @@ function throttle(func, delay) {
     
 }
 
-$(window).scroll(throttle(function () {
+function adjustNavAppearance() {
     const scrollTop = $(this).scrollTop();
     const windowWidth = $(this).width();
     const navbar = $('.navbar');
+    const navPage = $('.nav-page a');
+    const img1 = $('img[alt="查訂單"]');
+    const img2 = $('img[alt="會員登入"]');
+    const img3 = $('img[alt="購物車"]');
 
     if (scrollTop === 0 && windowWidth > 991) {
         navbar.css("background-color", "transparent");
+        navPage.css("color","rgb(255, 255, 255 , 1)");
+        img1.attr('src','./images/order_paper_icon1.svg');
+        img2.attr('src','./images/login_logo2_icon1.svg');
+        img3.attr('src','./images/shopping_cart_icon1.svg');
+    }else if (scrollTop === 0 && windowWidth < 991) {
+        navbar.css("background-color", "rgba(78, 142, 105,1)");
+        img1.attr('src','./images/order_paper_icon.svg');
+        img2.attr('src','./images/login_logo2_icon.svg');
+        img3.attr('src','./images/shopping_cart_icon.svg');
     } else if (windowWidth < 991) {
-        navbar.css("background-color", "rgba(46, 184, 103, 0.769)");
+        navbar.css("background-color", "rgba(78, 142, 105,1)");
+        img1.attr('src','./images/order_paper_icon.svg');
+        img2.attr('src','./images/login_logo2_icon.svg');
+        img3.attr('src','./images/shopping_cart_icon.svg');
     } else {
         navbar.css("background-color", "rgb(255, 255, 255 , 0.8)");
+        navPage.css("color","rgb(0, 0, 0 , 1)");
+        img1.attr('src','./images/order_paper_icon.svg');
+        img2.attr('src','./images/login_logo2_icon.svg');
+        img3.attr('src','./images/shopping_cart_icon.svg');
     }
-}, 200)); // 在滚动事件中添加了200毫秒的节流时间
+}
+
+const throttledAdjustNavAppearance = throttle(adjustNavAppearance, 200);
+
+$(window).scroll(throttledAdjustNavAppearance);
+$(window).resize(throttledAdjustNavAppearance);
 
 // 滑動頂點
 $('#gotop').click(function () {
